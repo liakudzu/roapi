@@ -1,0 +1,14 @@
+addr:
+  # binding address for TCP port that speaks HTTP protocol
+  http: 0.0.0.0:8080
+  # binding address for TCP port that speaks Postgres wire protocol
+  postgres: 0.0.0.0:5433
+
+tables:
+  - name: "mytable"
+    uri: "postgresql://postgres:password@127.0.0.1:5432/mydatabase"
+
+features:
+  enable_aggregations: true
+
+body_limit: 104857600
